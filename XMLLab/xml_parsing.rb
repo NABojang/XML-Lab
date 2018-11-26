@@ -24,6 +24,13 @@ class GuiseppesMenu
   def get_price
     @menu.xpath('/breakfast_menu/food/price').text.split('£')
   end
+  def get_calories
+    cal = @menu.xpath('/breakfast_menu/food/calories')
+  end
+
+  def get_waffles
+     @menu.xpath('/breakfast_menu/food/name')
+  end
 
 end
 
