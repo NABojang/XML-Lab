@@ -29,11 +29,11 @@ class GuiseppesMenu
   end
 
   def get_waffles
-     @menu.xpath('/breakfast_menu/food/name')
+     @menu.xpath('/breakfast_menu/food/description')
   end
 
 end
 
 guisepes = GuiseppesMenu.new
 puts  guisepes.get_price
-puts guisepes.get_calories
+puts guisepes.get_waffles

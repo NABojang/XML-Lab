@@ -25,9 +25,13 @@ describe "XML menu" do
 
   it "should have all waffle dishes stating you get two waffles" do
     # Consider children element methods - Remember to step through the data and print out to the command line if you need it
+    @xml_menu.get_waffles.each do |waffles|
+      if (@xml_menu.get_waffles(waffles.children..text))
+        expect(@xml_menu.get_waffles.children.fourth.text.downcase).to include("two waffles")
+        expect(@xml_menu.get_waffles.children.last.text.downcase).to include("two waffles")
 
-
-
+      end
+    end
   end
 
 end
