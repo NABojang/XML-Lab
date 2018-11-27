@@ -31,7 +31,7 @@ describe "XML menu" do
         expect(@xml_menu.get_waffles.children.last.text).to include("two waffles")
 
       end
-    end
-  end
+     end
+   end
 
 end
