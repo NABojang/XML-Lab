@@ -7,7 +7,6 @@ class GuiseppesMenu
   def initialize
     @menu = Nokogiri::XML(File.open('./xml_menu.xml'))
   end
-
   # Place your methods here
   def get_menu_names
     @menu.search('name')
@@ -27,7 +26,6 @@ class GuiseppesMenu
   def get_calories
     cal = @menu.xpath('/breakfast_menu/food/calories')
   end
-
   def get_waffles
      @menu.xpath('/breakfast_menu/food/description')
   end
